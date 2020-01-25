@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.IdentityHashMap;
 import java.util.LinkedList;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
@@ -167,7 +168,7 @@ public class Generics  {
   private static Class getHashMapClass() {
     try {
       if (HASH_MAP_CLASSNAME == null) {
-        return HashMap.class;
+        return LinkedHashMap.class;
       } else {
         return Class.forName(HASH_MAP_CLASSNAME);
       }
